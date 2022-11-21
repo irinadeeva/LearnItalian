@@ -8,34 +8,32 @@
 import SwiftUI
 
 struct TopicListView: View {
+    @State private var searchText = ""
+    
     var body: some View {
         
         
-        NavigationView {
+        NavigationStack{
             
             VStack(alignment: .leading){
                 
-                Text("Choose Topic")
-                    .font(.title2)
-                    .bold()
-        
-                
-                
-                
                 List {
-                    ForEach(topics){topic in
-                        NavigationLink{
-                            WordListView()
-                        } label: {
-                            TopicView(money: topic.name, image: topic.picture, numberAllWords: topic.numberAllWords, numberLearntWords: topic.numberLearntWords)
+                    Section{
+                        ForEach(topics){topic in
+                            NavigationLink{
+                                WordListView()
+                            } label: {
+                                TopicView(money: topic.name, image: topic.picture, numberAllWords: topic.numberAllWords, numberLearntWords: topic.numberLearntWords)
+                            }
                         }
-                    }
-                }
-              
-                
-            }.navigationTitle("Learn Italian")
-                
-
+                    } header: {
+                        Text("Choose topic")
+                        .offset(x:-17,y:0)  // to do - better solution???
+                    }.headerProminence(.increased)
+                    
+                }.navigationTitle("Learn Italian")
+                    .searchable(text: $searchText) // to do - workable
+            }
         }
         
     }

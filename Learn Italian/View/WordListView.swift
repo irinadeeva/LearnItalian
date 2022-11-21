@@ -11,14 +11,13 @@ struct WordListView: View {
     var body: some View {
         
         VStack(alignment: .leading){
-            TopicView(money: "Money", image: "dollarsign.circle", numberAllWords: 20, numberLearntWords: 0)
-             
-            
-            
             List{
-                Section{
+                Section {
                     WordView(language: "English", word: "money", transcription: "ˈmʌni")
-                }
+                } header: {
+                    TitleTopic(money: "Money", numberAllWords: 20, numberLearntWords: 0)
+                        .offset(x: -17, y: 0)// to do - better solution???
+                }.headerProminence(.increased)
                 Section{
                     WordView(language: "Italian", word: "soldi", transcription: "sòldi")
                 }

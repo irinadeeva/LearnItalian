@@ -44,5 +44,41 @@
 
     },
     
+    {
+        "id": 1006,
+        "name": "Money",
+        "picture": "dollarsign.circle",
+        "numberAllWords": 20,
+        "numberLearntWords": 8
+
+    },
+    
+    {
+        "id": 1007,
+        "name": "Money",
+        "picture": "dollarsign.circle",
+        "numberAllWords": 20,
+        "numberLearntWords": 8
+
+    },
+    
+    {
+        "id": 1008,
+        "name": "Money",
+        "picture": "dollarsign.circle",
+        "numberAllWords": 20,
+        "numberLearntWords": 8
+
+    },
+    
+    {
+        "id": 1009,
+        "name": "Money",
+        "picture": "dollarsign.circle",
+        "numberAllWords": 20,
+        "numberLearntWords": 8
+
+    },
+    
     
 ]
