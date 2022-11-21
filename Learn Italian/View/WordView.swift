@@ -7,28 +7,11 @@
 
 import SwiftUI
 
-
-struct TestWordsView: View {
-    
-    var body: some View {
-        
-        List{
-            Section{
-                WordView(language: "English", word: "money", transcription: "ˈmʌni")
-            }
-            Section{
-                WordView(language: "Italian", word: "soldi", transcription: "sòldi")
-            }
-        }
-
-    }
-}
-
-
 struct WordView: View {
     @State var language: String
     @State var word: String
     @State var transcription: String
+    
     
     init(language: String, word: String, transcription: String) {
         self.language = language
@@ -65,11 +48,5 @@ struct WordView: View {
 struct WordView_Previews: PreviewProvider {
     static var previews: some View {
         WordView(language: "English", word: "money", transcription: "ˈmʌni")
-    }
-}
-
-struct TestWordsView_Previews: PreviewProvider {
-    static var previews: some View {
-        TestWordsView()
     }
 }

@@ -7,38 +7,17 @@
 
 import SwiftUI
 
-struct TestView: View {
-    
-    var body: some View {
-    
-        
-        List {
-            
-                TopicView(money: "Money", image: "dollarsign.circle", numberWords: "10/20 words")
-                TopicView(money: "Money", image: "dollarsign.circle", numberWords: "10/20 words")
-                TopicView(money: "Money", image: "dollarsign.circle", numberWords: "10/20 words")
-                TopicView(money: "Money", image: "dollarsign.circle", numberWords: "10/20 words")
-                TopicView(money: "Money", image: "dollarsign.circle", numberWords: "10/20 words")
-                TopicView(money: "Money", image: "dollarsign.circle", numberWords: "10/20 words")
-                TopicView(money: "Money", image: "dollarsign.circle", numberWords: "10/20 words")
-                TopicView(money: "Money", image: "dollarsign.circle", numberWords: "10/20 words")
-                TopicView(money: "Money", image: "dollarsign.circle", numberWords: "10/20 words")
-            
-        //}.listStyle(.plain)
-        }
-        
-    }
-}
-
 struct TopicView: View {
     @State var money: String
     @State var image: String
-    @State var numberWords: String
+    @State var numberAllWords: Int
+    @State var numberLearntWords: Int
     
-    init(money: String, image: String, numberWords: String) {
+    init(money: String, image: String, numberAllWords: Int, numberLearntWords: Int) {
         self.money = money
         self.image = image
-        self.numberWords = numberWords
+        self.numberAllWords = numberAllWords
+        self.numberLearntWords = numberLearntWords
     }
     
     var body: some View {
@@ -51,11 +30,10 @@ struct TopicView: View {
                         .font(.system(size: 21, weight: .heavy))
                 }
             }
-            Text(numberWords)
+            Text("\(numberLearntWords)/\(numberAllWords) words")
                 .font(.system(.subheadline))
                 .offset(x: 35, y: 0)
             
-          
             ProgressBarView()
                 .offset(x: 35, y: 0)
         }
@@ -65,14 +43,6 @@ struct TopicView: View {
 
 struct TopicView_Previews: PreviewProvider {
     static var previews: some View {
-        TopicView(money: "Money", image: "dollarsign.circle", numberWords: "10/20 words")
+        TopicView(money: "Money", image: "dollarsign.circle", numberAllWords: 20, numberLearntWords: 0)
     }
 }
-
-struct TestView_Previews: PreviewProvider {
-    static var previews: some View {
-        TestView()
-    }
-}
-
-

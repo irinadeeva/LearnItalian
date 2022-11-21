@@ -9,7 +9,21 @@ import SwiftUI
 
 struct WordListView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        
+        VStack(alignment: .leading){
+            TopicView(money: "Money", image: "dollarsign.circle", numberAllWords: 20, numberLearntWords: 0)
+             
+            
+            
+            List{
+                Section{
+                    WordView(language: "English", word: "money", transcription: "ˈmʌni")
+                }
+                Section{
+                    WordView(language: "Italian", word: "soldi", transcription: "sòldi")
+                }
+            }
+        }
     }
 }
 

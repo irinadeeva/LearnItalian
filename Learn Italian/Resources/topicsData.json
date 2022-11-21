@@ -1,0 +1,48 @@
+[
+    {
+        "id": 1001,
+        "name": "Money",
+        "picture": "dollarsign.circle",
+        "numberAllWords": 20,
+        "numberLearntWords": 0
+
+    },
+    
+    {
+        "id": 1002,
+        "name": "Money",
+        "picture": "dollarsign.circle",
+        "numberAllWords": 20,
+        "numberLearntWords": 2
+
+    },
+    
+    {
+        "id": 1003,
+        "name": "Money",
+        "picture": "dollarsign.circle",
+        "numberAllWords": 20,
+        "numberLearntWords": 5
+
+    },
+    
+    {
+        "id": 1004,
+        "name": "Money",
+        "picture": "dollarsign.circle",
+        "numberAllWords": 20,
+        "numberLearntWords": 7
+
+    },
+    
+    {
+        "id": 1005,
+        "name": "Money",
+        "picture": "dollarsign.circle",
+        "numberAllWords": 20,
+        "numberLearntWords": 8
+
+    },
+    
+    
+]
