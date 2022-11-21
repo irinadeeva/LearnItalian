@@ -10,7 +10,7 @@ import SwiftUI
 struct TestView: View {
     
     var body: some View {
-        
+    
         
         List {
             
@@ -24,8 +24,8 @@ struct TestView: View {
                 TopicView(money: "Money", image: "dollarsign.circle", numberWords: "10/20 words")
                 TopicView(money: "Money", image: "dollarsign.circle", numberWords: "10/20 words")
             
+        //}.listStyle(.plain)
         }
-        
         
     }
 }
